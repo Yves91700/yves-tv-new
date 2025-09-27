@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const intro = document.getElementById("intro-logo");
   setTimeout(() => {
     intro.style.display = "none";
-  }, 4000); // durée de l'animation
+  }, 4500); // durée de l'animation
 });
 
 document.addEventListener("DOMContentLoaded", () => {
