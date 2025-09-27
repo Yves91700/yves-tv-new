@@ -1,8 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
   const intro = document.getElementById("intro-logo");
+  const cards = document.querySelectorAll(".card");
+
+  // Masquer le logo après l'animation
   setTimeout(() => {
     intro.style.display = "none";
-  }, 4500); // durée de l'animation
+
+    // Ensuite, déclencher l'animation des cartes
+    cards.forEach((card, index) => {
+      setTimeout(() => {
+        card.classList.add("visible");
+      }, index * 200); // effet en cascade
+    });
+  }, 4500); // durée de l'animation du logo
 });
 
 document.addEventListener("DOMContentLoaded", () => {
