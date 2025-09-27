@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const intro = document.getElementById("intro-logo");
+  setTimeout(() => {
+    intro.style.display = "none";
+  }, 2500); // durée de l'animation
+});
+
+document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("myModal");
   const modalImg = document.getElementById("img01");
   const captionText = document.getElementById("caption");
