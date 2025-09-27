@@ -29,40 +29,47 @@ body {
   animation: spiralOut 2.5s ease-out forwards;
 }
 
+#intro-logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0c0c0c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeOutIntro 4s ease-out forwards;
+}
+
 #intro-logo img {
   width: clamp(150px, 25vw, 400px);
-  animation: logoZoom 2s ease-out;
+  animation: fadeInLogo 2.5s ease-out;
 }
 
-/* Animation du logo */
-@keyframes logoZoom {
+/* Apparition douce du logo */
+@keyframes fadeInLogo {
   0% {
-    transform: scale(0.8) rotate(0deg);
     opacity: 0;
-  }
-  50% {
-    transform: scale(1.1) rotate(180deg);
-    opacity: 1;
+    transform: scale(0.8);
   }
   100% {
-    transform: scale(1) rotate(360deg);
     opacity: 1;
+    transform: scale(1);
   }
 }
 
-/* Animation de sortie en spirale */
-@keyframes spiralOut {
+/* Disparition en fondu lent */
+@keyframes fadeOutIntro {
   0% {
     opacity: 1;
-    transform: scale(1) rotate(0deg);
   }
   80% {
-    opacity: 0.5;
-    transform: scale(0.5) rotate(720deg);
+    opacity: 0.3;
   }
   100% {
     opacity: 0;
-    transform: scale(0) rotate(1080deg);
     visibility: hidden;
   }
 }
