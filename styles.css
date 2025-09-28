@@ -13,6 +13,13 @@ body {
   scroll-behavior: smooth;
   background-image: url("./Images /YvesTv-Logo.png");
 }
+.category h3 {
+  color: #00bcd4; /* bleu Apple TV */
+  font-weight: 600;
+  font-size: 1.6rem;
+  border-left: 4px solid #00bcd4;
+  padding-left: 10px;
+}
 
 /* Intro logo plein écran */
 #intro-logo {
@@ -144,7 +151,11 @@ main {
 .card-info p {
   margin: 0;
   font-size: 0.9rem;
-  color: #ccc;
+  color: #0c0c0c;
+}
+
+.card:hover .card-info p {
+  color: #26c6da; /* variante plus claire du bleu Apple */
 }
 
 /* Footer */
